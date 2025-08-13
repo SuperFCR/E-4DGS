@@ -44,7 +44,7 @@ If you like our project, please give us a star ⭐ on GitHub for latest update. 
 ## 🙏 Acknowledgements
 
 This source code is derived from multiple sources, in particular: 
-[gaussian-splatting](https://github.com/graphdeco-inria/gaussian-splatting/tree/main). We thank the authors for releasing their code.
+[deformable 3d gaussian-splatting](https://github.com/ingra14m/Deformable-3D-Gaussians), [E-NeRF](https://github.com/knelk/enerf), and [Event3DGS](https://github.com/lanpokn/Event-3DGS). We thank the authors for releasing their code.
 
 ```bibtex
 
