@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="static/assets/3d-fire.ico" type="image/x-icon">
+        <title> E-4DGS: High-Fidelity Dynamic Reconstruction from the Multi-view Event Cameras</title>
+
+        <link rel="stylesheet" href="static/css/academicons.min.css">
+        <link rel="stylesheet" href="static/css/fontawesome.min.css">
+        <script src="static/js/all.min.js"></script>
+        <script src="static/js/bulma-carousel.min.js"></script>
+
+
+        <link rel="stylesheet" href="static/css/style.css">
+        <script src="static/js/script.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                    <a class="navbar-item" href="https://www.cs.cit.tum.de/cg/people/niedermayr/">
+                        <span class="icon">
+                            <i class="fas fa-home"></i>
+                        </span>
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            More Research
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="https://github.com/PKU-YuanGroup/EvaGaussians">
+                                EvaGaussians
+                            </a>
+                            <a class="navbar-item" href="https://github.com/PKU-YuanGroup/Cycle3D">
+                                Cycle3D
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <!-- <h1 class="title is-1 is-size-3-mobile publication-title"> NeuralGS: Bridging Neural Fields and 3D Gaussian Splatting 
+                                for Compact 3D Representation</h1> -->
+                            <h1>
+                                <span class="gradient-text">🎥 E-4DGS</span>: High-Fidelity Dynamic Reconstruction from the Multi-view Event Cameras
+                            </h1>
+                            <!-- <h2 class="subtitle is-4 opacity-1" style="margin-top: 1rem;opacity:0.7">Anonymous CVPR submission</h2>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block"> Paper ID 801 </span>
+                            </div> -->
+                            <!-- <br> -->
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a href="https://github.com/SuperFCR/E-4DGS"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://github.com/SuperFCR/E-4DGS"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+
+                            </div>
+                            <br>
+                            <!-- Authors -->
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                    <strong>Chaoran Feng</strong><sup>1*</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <strong>Zhenyu Tang</strong><sup>1*</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <strong>Wangbo Yu</strong><sup>1*</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <strong>Yatian Pang</strong><sup>2</sup>,
+                                </span> 
+                                <span class="author-block">
+                                    <strong>Yian Zhao</strong><sup>1</sup>,
+                                </span> 
+                                <br>
+                                <span class="author-block">
+                                    <strong>Jianbin Zhao</strong><sup>3</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <strong>Li Yuan</strong> <sup>1†</sup>,
+                                </span>
+                                <span class="author-block">
+                                    <strong>Yonghong Tian</strong> <sup>1†</sup>,
+                                </span>
+                            </div>
+
+                            <!-- Organization -->
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block is-size-6"><sup>1</sup>School of Electronic and Computer Engineering, Peking University</span> <br>
+                                <span class="author-block is-size-6"><sup>2</sup>National University of Singapore</span> <br>
+                                <span class="author-block is-size-6"><sup>3</sup>School of Future Technology, Dalian University of Technology</span>
+                            </div>
+                            <!-- Note -->
+                            <h6 class="subtitle is-6 opacity-1" style="margin-top: 1rem;opacity:0.7"></h6>
+                                *These authors contributed equally to this work.
+                                <br>
+                                †Corresponding author.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero teaser is-light">
+            <div class="hero-body">
+                <div class="container">
+                    <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-bicycle">
+                            <video poster="" id="bicycle" autoplay controls muted loop playsinline height="100%">
+                                <source src="./static/videos/1.mp4" type="video/mp4">
+                            </video>
+
+                        </div>
+
+                        <div class="item item-kitchen">
+                            <video poster="" id="kitchen" autoplay controls muted loop playsinline height="100%">
+                                <source src="./static/videos/2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="item item-room">
+                            <video poster="" id="room" autoplay controls muted loop playsinline height="100%">
+                                <source src="./static/videos/3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="item item-garden">
+                            <video poster="" id="garden" autoplay controls muted loop playsinline height="100%">
+                                <source src="./static/videos/4.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="item item-playroom">
+                            <video poster="" id="playroom" autoplay controls muted loop playsinline height="100%">
+                                <source src="./static/videos/5.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+                    <div style="height: 1rem;"></div>
+                    <h2 class="subtitle has-text-centered is-size-6-mobile">
+                        Our <span class="gradient-text"><strong>E-4DGS</strong></span> reconstructs temporally consistent and photorealistic dynamic scenes using event streams and sparse RGB frames captured from multi-view moving cameras, effectively handling complex motion and lighting variations.
+                        (The first frame of the blurry input is sharp to distinguish different perspectives during visualization.)
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop is-mobile">
+                <!-- Abstract. -->
+                <div class="columns is-centered">
+                    <div class="column is-four-fifths">
+                        <div class="has-text-centered">
+                            <h2 class="title is-3">📌 Abstract</h2>
+                        </div>
+                        <br>
+                        <div class="is-centered">
+                            <figure style="text-align: center;">
+                                <img src="static/img/teaser.png" alt="Compression Pipeline" style="display: inline-block;">
+                            </figure>
+                        </div>
+                        <br>
+                        <div class="content has-text-justified">
+                            Novel view synthesis and 4D reconstruction techniques predominantly rely on RGB cameras, thereby inheriting inherent limitations such as the dependence on adequate lighting, susceptibility to motion blur, and a limited dynamic range.
+                            Event cameras, offering advantages of low power, high temporal resolution and high dynamic range, have brought a new perspective to addressing the scene reconstruction challenges in high-speed motion and low-light scenes.
+                            To this end, we propose <strong>E-4DGS</strong>, the first event-driven dynamic Gaussian Splatting approach, for novel view synthesis from multi-view event streams with fast-moving cameras.
+                            Specifically, we introduce an event-based initialization scheme to ensure stable training and propose event-adaptive slicing splatting for time-aware reconstruction. Additionally, we employ intensity importance pruning to eliminate floating artifacts and enhance 3D consistency, while incorporating an adaptive contrast threshold for more precise optimization.
+                            We design a synthetic multi-view camera setup with six moving event cameras surrounding the object in a 360-degree configuration and provide a benchmark multi-view event stream dataset that captures challenging motion scenarios.
+                            Our approach outperforms both event-only and event-RGB fusion baselines and paves the way for the exploration of multi-view event-based reconstruction as a novel approach for rapid scene capture.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop is-mobile">
+                <div class="is-centered" style="margin-bottom: 2rem;">
+                    <h2 class="title is-3">💡 Method</h2>
+                </div>
+                <p>
+                We propose <strong>E-4DGS</strong>, a method for high-fidelity dynamic scene reconstruction using sparse event camera streams. 
+                Given multi-view event data capturing a dynamic scene, E-4DGS reconstructs a 4D model that allows novel view generation at arbitrary times. 
+                To address the challenges posed by the sparse nature of event data and the dynamic characteristics of the scene, we introduce an event-based initialization strategy (Section 4.1), an event-aware slicing splatting technique to preserve geometric details (Section 4.2), and multi-view 3D consistency regularization for improved scene fidelity (Section 4.3). 
+                Additionally, we utilize adaptive event supervision and color recovery to enhance the reconstruction quality (Section 4.4). 
+                The overview of our method is illustrated in Figure 1.
+                </p>
+                <br>
+                <div class="is-centered">
+                    <figure style="text-align: center;">
+                        <img src="static/img/pipeline.png" alt="Compression Pipeline" style="display: inline-block;">
+                        <figcaption style="text-align: center; margin-top: 0.5rem;">Figure 1: Overview of <strong>E-4DGS</strong>. </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="section">
+            <div class="container is-max-desktop is-mobile">
+                <div class="is-centered" style="margin-bottom: 2rem;">
+                    <h2 class="title is-3">🔗 Results</h2>
+                </div>
+                <p>
+                    We implemented E-4DGS based on the official code of Deformable3DGS, Gaussianflow, E-NeRF and Event3DGS with Pytorch and conduct all experiments 
+                    on a single NVIDIA RTX 4090 GPU. During training, we render at a resolution of 346 × 260 for the synthetic dataset 
+                    and retain the original resolution 640 × 480 for real-scene data.
+                </p>
+                <br>
+
+                <div class="is-centered" style="margin-bottom: 1.5rem;">
+                    <h3 class="title is-3">Qualitative Comparisons</h3>
+                </div>
+
+                <div class="is-centered">
+                    <figure style="text-align: center;">
+                        <img src="static/img/vis_comprison.png" alt="Compression Pipeline" style="display: inline-block;">
+                        <figcaption style="text-align: center; margin-top: 0.5rem;"> Figure 2: Qualitative comprison on the mentioned synthetic and real dataset. </figcaption>
+                    </figure>
+                </div>
+
+                <br>
+                <div class="is-centered" style="margin-bottom: 1.5rem;">
+                    <h3 class="title is-3">Quantitative Comparisons</h3>
+                </div>
+
+                <div class="is-centered">
+                    <figure style="text-align: center;">
+                        <!-- <figcaption style="text-align: center; margin-top: 0.5rem;"> Table 1. Quantitative results evaluated on <em>Mip-NeRF 360, Tanks&Temples, and Deep Blending</em> datasets. We highlight the
+                            best-performing results in <span style="color: red;">red</span> and the second-best results in <span style="color: #e9d600;">yellow</span> for all compression methods </figcaption> -->
+                        <img src="static/img/tables/table1.png" alt="Compression Pipeline" style="display: inline-block;">
+                    </figure>
+                </div>
+                <br>
+                <div class="is-centered">
+                    <figure style="text-align: center;">
+                        <!-- <figcaption style="text-align: center; margin-top: 0.5rem;"> Table 1. Quantitative results evaluated on <em>Mip-NeRF 360, Tanks&Temples, and Deep Blending</em> datasets. We highlight the
+                            best-performing results in <span style="color: red;">red</span> and the second-best results in <span style="color: #e9d600;">yellow</span> for all compression methods </figcaption> -->
+                        <img src="static/img/tables/table2.png" alt="Compression Pipeline" style="display: inline-block;">
+                    </figure>
+                </div>
+                <br>
+
+            </div>
+        </section>
+        <section class="section" id="BibTeX" style="margin-top: -5em;">
+            <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>@InProceedings{feng2025e4dgs,
+                author    = {Chaoran Feng, Zhenyu Tang, Wangbo Yu, Yatian Pang, Yian Zhao, Jianbin Zhao, Li Yuan, Yonghong Tian},
+                title     = {E-4DGS: High-Fidelity Dynamic Reconstruction from the Multi-view Event Cameras},
+                booktitle = {ACM MM 2025},
+                month     = {August},
+                year      = {2025},
+                pages     = {}
+            }</code></pre>
+            </div>
+        </section>
+
+
+        <script>
+            for (var elm of document.querySelectorAll(".image-compare")) {
+                new BeforeAfter(elm)
+            }
+            var options = {
+                slidesToScroll: 1,
+                slidesToShow: 3,
+                loop: true,
+                infinite: true,
+                autoplay: false,
+                autoplaySpeed: 3000,
+            }
+
+            // Initialize all div with carousel class
+            var carousels = bulmaCarousel.attach('.carousel', options);
+
+            for (var i = 0; i < carousels.length; i++) {
+                // Add listener to  event
+                carousels[i].on('before:show', () => { });
+            }
+
+            // Access to bulmaCarousel instance of an element
+            var element = document.querySelector('#my-element');
+            if (element && element.bulmaCarousel) {
+                // bulmaCarousel instance is available as element.bulmaCarousel
+                element.bulmaCarousel.on('before-show', () => { });
+            }
+        </script>
+    </body>
+
+    </html>
