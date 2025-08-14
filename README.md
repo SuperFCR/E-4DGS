@@ -48,7 +48,13 @@ This source code is derived from multiple sources, in particular:
 
 ```bibtex
 
-To be contunied...
+@inproceedings{feng2025e-4dgs,
+  title={E-4DGS: High-Fidelity Dynamic Reconstruction from the Multi-view Event Cameras
+},
+  author={Chaoran Feng, Zhenyu Tang, Wangbo Yu, Yatian Pang, Yian Zhao, Jianbin Zhao, Li Yuan, Yonghong Tian},
+  booktitle={Proceedings of the 33nd ACM International Conference on Multimedia},
+  year={2025}
+}
 
 ```
 
